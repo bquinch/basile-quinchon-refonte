@@ -8,6 +8,9 @@ gem 'puma'
 gem 'rails', '6.0.2.2'
 gem 'redis'
 
+# GEMS I ADDED
+gem 'mailgun-ruby', '~> 1.2'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'sassc-rails'

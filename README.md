@@ -1,1 +1,5 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Repository of my portfolio, reworked in April - Mai 2020 using Rails 6 and Le Wagon templates
+
+If you have any question or recommandation, don't hesitate to reach out to me at
+
+basile.quinchon@gmail.com

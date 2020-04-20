@@ -1,0 +1,122 @@
+.banner-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.banner-text {
+  padding: 0 30%;
+}
+
+.accolades {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.banner-text__first_name,
+.banner-text__last_name {
+  font-family: 'courier';
+  font-size: 8rem;
+  padding: 0px;
+  line-height: 5.5rem;
+  color: $blue;
+  font-weight: 100;
+
+  span {
+    color: $orange;
+  }
+}
+
+.accolade-gauche,
+.accolade-droite {
+  z-index: 1;
+  height: 500px;
+  background-size: cover !important;
+}
+
+.banner-code {
+  z-index: 1;
+  height: 500px;
+  flex: 0 0 40%;
+  position: relative;
+  background-attachment: fixed !important;
+  background-size: 60% !important;
+
+  &.left {
+    top: 5vh;
+  }
+
+  &.right {
+    top: 30vh;
+  }
+}
+
+.test {
+  height: 100vh;
+  background: $orange;
+}
+
+@media (max-width: 576px) {
+  .accolades {
+    flex-direction: column;
+  }
+
+  .banner-code {
+    position: initial;
+    height: 400px;
+  }
+
+  .banner-text {
+    padding: 0 10%;
+  }
+
+  .accolade-gauche,
+  .accolade-droite {
+    height: 400px;
+  }
+
+  .banner-text__first_name,
+  .banner-text__last_name {
+    font-size: 4rem;
+    line-height: 3rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .banner-text__first_name,
+  .banner-text__last_name {
+    font-size: 3rem;
+    line-height: 2rem;
+  }
+
+  .banner-code {
+    position: initial;
+    height: 300px;
+  }
+
+  .banner-text {
+    padding: 0 15%;
+  }
+
+  .accolade-gauche,
+  .accolade-droite {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  .banner-text__first_name,
+  .banner-text__last_name {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+
+  .banner-text {
+    padding: 0 25%;
+  }
+}

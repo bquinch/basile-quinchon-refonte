@@ -1,14 +1,67 @@
 .presentation-container {
-  height: 100vh;
+  height: fit-content;
   overflow: hidden;
-  background: $blue;
+  background: $lighter-gray;
+  padding: 5rem;
+  position: relative;
+  height: fit-content;
 }
 
-.sites_mockup {
-  object-fit: cover !important;
-  box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
-  width: 100%;
-  height: 100%;
+.cyrano_mockup {
+  z-index: 1;
+  object-fit: cover;
   object-position: center;
-  background-attachment: fixed;
+}
+
+.presentation-text-right {
+  z-index: 1;
+  height: 70vh;
+
+  p {
+    text-align: justify;
+    line-height: 2rem;
+  }
+}
+
+.wrapper-color-gray-presentation {
+  position: absolute;
+  top: 15%;
+  height: 70%;
+  width: 30%;
+  background-color: $light-gray;
+  right: 25%;
+  z-index: 0;
+}
+
+@media (max-width: 576px) {
+  .presentation-container {
+    padding: 2rem;
+    overflow-y: hidden;
+  }
+
+  .cyrano_mockup {
+    width: 130vw;
+    position: relative;
+    left: -20%;
+    object-position: center;
+  }
+
+  .presentation-text-right {
+    height: fit-content;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .presentation-container {
+    padding: 2rem;
+    overflow-y: hidden;
+  }
+
+  .cyrano_mockup {
+    object-position: center;
+  }
+
+  .presentation-text-right {
+    height: fit-content;
+  }
 }

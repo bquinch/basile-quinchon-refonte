@@ -7,7 +7,25 @@
 }
 
 .banner-text {
-  padding: 0 30%;
+  padding: 0 0 0 30%;
+  opacity: .8;
+}
+
+.wrapper-color {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: $lighter-gray;
+}
+
+.wrapper-color-gray {
+  position: absolute;
+  top: 20%;
+  height: 70%;
+  width: 45%;
+  background-color: $light-gray;
+  left: 25%;
 }
 
 .accolades {
@@ -21,13 +39,13 @@
 .banner-text__first_name,
 .banner-text__last_name {
   font-family: 'courier';
-  font-size: 8rem;
+  font-size: 4rem;
   padding: 0px;
-  line-height: 5.5rem;
+  line-height: 3rem;
   color: $blue;
   font-weight: 100;
 
-  span {
+  .first_letter {
     color: $orange;
   }
 }
@@ -35,42 +53,25 @@
 .accolade-gauche,
 .accolade-droite {
   z-index: 1;
-  height: 500px;
+  height: 80%;
+  width: 100%;
+  flex: 1 0 50%;
   background-size: cover !important;
+  background-position: center !important;
 }
 
-.banner-code {
-  z-index: 1;
-  height: 500px;
-  flex: 0 0 40%;
-  position: relative;
-  background-attachment: fixed !important;
-  background-size: 60% !important;
-
-  &.left {
-    top: 5vh;
-  }
-
-  &.right {
-    top: 30vh;
-  }
+.accolade-gauche {
+  align-self: flex-start;
 }
 
-.test {
-  height: 100vh;
-  background: $orange;
+.accolade-droite {
+  align-self: flex-end;
 }
 
 @media (max-width: 576px) {
   .accolades {
     flex-direction: column;
   }
-
-  .banner-code {
-    position: initial;
-    height: 400px;
-  }
-
   .banner-text {
     padding: 0 10%;
   }
@@ -93,30 +94,6 @@
     font-size: 3rem;
     line-height: 2rem;
   }
-
-  .banner-code {
-    position: initial;
-    height: 300px;
-  }
-
-  .banner-text {
-    padding: 0 15%;
-  }
-
-  .accolade-gauche,
-  .accolade-droite {
-    height: 300px;
-  }
 }
 
-@media (max-width: 768px) and (min-width: 576px) {
-  .banner-text__first_name,
-  .banner-text__last_name {
-    font-size: 5rem;
-    line-height: 4rem;
-  }
 
-  .banner-text {
-    padding: 0 25%;
-  }
-}

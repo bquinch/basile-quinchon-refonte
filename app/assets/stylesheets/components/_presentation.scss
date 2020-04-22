@@ -5,22 +5,34 @@
   padding: 5rem;
   position: relative;
   height: fit-content;
+
+  &.left-presentation {
+    padding: 3rem 8rem;
+  }
 }
 
-.cyrano_mockup {
+.mockup {
   z-index: 1;
   object-fit: cover;
   object-position: center;
 }
 
-.presentation-text-right {
+.presentation-text-right,
+.presentation-text-left {
   z-index: 1;
-  height: 70vh;
 
   p {
     text-align: justify;
     line-height: 2rem;
   }
+}
+
+.presentation-text-right {
+  height: 70vh;
+}
+
+.presentation-text-left {
+  height: 60vh;
 }
 
 .wrapper-color-gray-presentation {
@@ -31,12 +43,22 @@
   background-color: $light-gray;
   right: 25%;
   z-index: 0;
+
+  &.left {
+    right: '';
+    height: 50%;
+    left: 20%;
+  }
 }
 
 @media (max-width: 576px) {
   .presentation-container {
-    padding: 2rem;
+    padding: 0rem 2rem;
     overflow-y: hidden;
+
+    &.left-presentation {
+      padding: 2rem;
+    }
   }
 
   .cyrano_mockup {
@@ -46,7 +68,8 @@
     object-position: center;
   }
 
-  .presentation-text-right {
+  .presentation-text-right,
+  .presentation-text-left {
     height: fit-content;
   }
 }

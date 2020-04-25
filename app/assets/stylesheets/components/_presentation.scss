@@ -41,8 +41,8 @@
 
 .wrapper-color-gray-presentation {
   position: absolute;
-  top: 15%;
-  height: 70%;
+  top: 10%;
+  height: 50%;
   width: 30%;
   background-color: $orange-opaque;
   right: 25%;
@@ -52,13 +52,19 @@
     right: '';
     height: 50%;
     left: 20%;
+    top: -20% !important;
+  }
+
+  &.right {
+    top: -25% !important;
+    width: 25%;
   }
 
   &.center {
     height: 50%;
     width: 90%;
     right: 5%;
-    top: 25%;
+    top: -25% !important;
   }
 }
 

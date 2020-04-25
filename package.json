@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
-    "@rails/activestorage": "^6.0.0",
+    "@rails/activestorage": "^6.0.2",
     "@rails/webpacker": "5.1.1",
     "animate.css": "^3.7.2",
     "aos": "^2.3.4",

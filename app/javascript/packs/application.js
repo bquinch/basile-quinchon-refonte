@@ -5,6 +5,7 @@ import "bootstrap";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { navToggle } from '../plugins/nav_toggle';
+import { scrollSite } from '../plugins/scroll_site';
 import { initRellax } from "plugins/rellax.js";
 
 // WELCOME MESSAGE
@@ -17,6 +18,9 @@ console.log('%c%s',
             "If you like what you see, feel free to follow me on\nhttps://www.github.com/basilequinchon");
 // NAVBAR ANIMATION
 navToggle();
+
+// SCROLL ON SITES
+scrollSite();
 
 //RELLAX INIT
 if (document.querySelector('.rellax')) {

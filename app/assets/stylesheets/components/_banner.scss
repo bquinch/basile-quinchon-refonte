@@ -24,16 +24,17 @@
   top: 20%;
   height: 70%;
   width: 45%;
-  background-color: $light-gray;
+  background-color: $orange-opaque;
   left: 25%;
 }
 
-.accolades {
+.chevrons {
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
+
 }
 
 .banner-text__first_name,
@@ -50,34 +51,42 @@
   }
 }
 
-.accolade-gauche,
-.accolade-droite {
+.testing {
+  display: none;
+}
+
+.chevron-gauche,
+.chevron-droite {
   z-index: 1;
   height: 80%;
   width: 100%;
   flex: 1 0 50%;
-  background-size: cover !important;
-  background-position: center !important;
+  background-size: contain !important;
+  background-attachment: fixed !important;
+  mask-size: cover !important;
+  mask-position: center !important;
 }
 
-.accolade-gauche {
+.chevron-gauche {
   align-self: flex-start;
+  mask: url(chevron-gauche.svg);
 }
 
-.accolade-droite {
+.chevron-droite {
   align-self: flex-end;
+  mask: url(chevron-droit.svg);
 }
 
 @media (max-width: 576px) {
-  .accolades {
+  .chevrons {
     flex-direction: column;
   }
   .banner-text {
     padding: 0 10%;
   }
 
-  .accolade-gauche,
-  .accolade-droite {
+  .chevron-gauche,
+  .chevron-droite {
     height: 400px;
   }
 

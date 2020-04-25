@@ -7,6 +7,14 @@ import 'aos/dist/aos.css';
 import { navToggle } from '../plugins/nav_toggle';
 import { initRellax } from "plugins/rellax.js";
 
+// WELCOME MESSAGE
+console.log('%c%s',
+            "color: #FFF; background: #f2a365; font-size: 24px; padding: .5rem; font-family: 'courier'; text-align: center;",
+            'Greetings !');
+
+console.log('%c%s',
+            "color: #FFF; background: #333; font-family: 'courier'; padding: .25rem;",
+            "If you like what you see, feel free to follow me on\nhttps://www.github.com/basilequinchon");
 // NAVBAR ANIMATION
 navToggle();
 

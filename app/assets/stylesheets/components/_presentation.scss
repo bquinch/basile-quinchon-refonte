@@ -17,6 +17,10 @@
   object-position: center;
 }
 
+.presentation-text-center {
+  z-index: 1;
+}
+
 .presentation-text-right,
 .presentation-text-left {
   z-index: 1;
@@ -40,7 +44,7 @@
   top: 15%;
   height: 70%;
   width: 30%;
-  background-color: $light-gray;
+  background-color: $orange-opaque;
   right: 25%;
   z-index: 0;
 
@@ -49,6 +53,62 @@
     height: 50%;
     left: 20%;
   }
+
+  &.center {
+    height: 50%;
+    width: 90%;
+    right: 5%;
+    top: 25%;
+  }
+}
+
+.absolute-container {
+  position: relative;
+}
+
+.wrapper-code {
+  position: absolute;
+  top: 45%;
+  height: 20vh;
+  width: 100vw;
+  background-position: center !important;
+  background-size: 40% !important;
+  background-attachment: fixed !important;
+}
+
+.sites-container {
+  position: relative;
+  height: 100vh;
+}
+
+.phone-tall {
+  background-size: 140%;
+  background-position: center 10%;
+  height: 100vh;
+  width: 25%;
+  z-index: 0;
+  left: 15%;
+  top: 0;
+  z-index: 1;
+}
+
+.site-tall {
+  background-size: 130%;
+  background-position: center 10%;
+  width: 50vw;
+  height: 80vh;
+  right: 10%;
+  top: 10%;
+  z-index: 2;
+}
+
+.phone-tall,
+.site-tall {
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  position: absolute;
+
 }
 
 @media (max-width: 576px) {

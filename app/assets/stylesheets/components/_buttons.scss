@@ -1,0 +1,15 @@
+.btn-basile-primary {
+  font-size: 1rem;
+  padding: 0;
+  font-family: 'courier';
+  color: $gray;
+  background: $blue-opaque;
+  width: 100%;
+  text-align: start;
+
+  &:hover {
+    background: $orange-opaque;
+    color: $blue;
+  }
+}
+

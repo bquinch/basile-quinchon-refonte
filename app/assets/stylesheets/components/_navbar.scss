@@ -71,13 +71,10 @@ button:focus {
 }
 
 @media (max-width: 768px) {
-
-
-
   .navbar-basile {
 
     &.active {
-      background-color: $light-gray !important;
+      background-color: $lighter-gray !important;
     }
   }
 }

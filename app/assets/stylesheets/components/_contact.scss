@@ -1,0 +1,21 @@
+.new-message-form-container__title {
+  font-size: 1rem;
+  font-family: 'courier';
+  color: $blue;
+  display: flex;
+  align-items: center;
+  background: $orange-opaque;
+  height: 2rem;
+}
+
+.new-message-form-container {
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  form {
+    width: 100%;
+  }
+}
+

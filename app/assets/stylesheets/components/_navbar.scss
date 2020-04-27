@@ -70,6 +70,13 @@ button:focus {
   opacity: 0;
 }
 
+.dropdown-menu {
+  font-family: 'courier';
+  color: $blue;
+  min-width: fit-content;
+  width: fit-content;
+}
+
 @media (max-width: 768px) {
   .navbar-basile {
 

@@ -8,18 +8,31 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <%= link_to "#", class: "nav-link mr-5" do %>
-            <span><span class='nav-capital'></span>Accueil</span>
+            <span><span class='nav-capital'></span><%= t('navbar.home') %></span>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to "#about", class: "nav-link mr-5" do %>
-            <span><span class='nav-capital'></span>Travail</span>
+            <span><span class='nav-capital'></span><%= t('navbar.work') %></span>
           <% end %>
         </li>
         <li class="nav-item">
           <%= link_to "#contact", class: "nav-link" do %>
-            <span><span class='nav-capital'></span>Contact</span>
+            <span><span class='nav-capital'></span><%= t('navbar.contact') %></span>
           <% end %>
+        </li>
+        <li class="nav-item dropdown">
+          <div class="nav-link" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <% if I18n.locale == I18n.default_locale %>
+              FR
+            <% else %>
+              EN
+            <% end %>
+          </div>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to 'EN', { locale: :en }, class: 'dropdown-item' %>
+            <%= link_to 'FR', { locale: :fr }, class: 'dropdown-item' %>
+          </div>
         </li>
       </ul>
     </div>

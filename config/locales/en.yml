@@ -31,3 +31,19 @@
 
 en:
   hello: "Hello world"
+  home:
+    paragraph_1: "After 10 years in the television and movie industries as an editor, I took the decision in 2019 to has a professional reorientation as a developer"
+    paragraph_2: "In October, the same year, I did the Wagon Bootcamp in Paris. There, I learnt all the basics of code through the langage Ruby. Moreover, it became a passion."
+    paragraph_3: "At the end of the program, my team and I were happy to develop the app Cyrano, to help young students learn french poems through voice recognition."
+    paragraph_4: "For the end of the bootcamp, I share my time as a developer beween short freelance missions and side projects for myself. I like coding my apps so they are responsive, adapt to any kind of screen and environment."
+    paragraph_5: "I find myself become better in code every day. I wish to work on challenging projects. I don't have any limits, and I'm happy to confront myself to coding problems."
+    paragraph_6: "For me, a good app or website must have a pure and simple deign. They must be coherent, ergonomic, and pleasant to use."
+  messages:
+    name: 'Name'
+    subject: 'Subject of your message'
+    body: 'Your message'
+    send: "Send message"
+  navbar:
+    home: "Home"
+    work: "Work"
+    contact: "Contact"

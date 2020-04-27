@@ -9,6 +9,7 @@ gem 'rails', '6.0.2.2'
 gem 'redis'
 
 # GEMS I ADDED
+#MAILING
 gem 'mailgun-ruby', '~> 1.2'
 
 gem 'autoprefixer-rails'

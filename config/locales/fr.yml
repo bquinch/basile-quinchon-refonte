@@ -1,0 +1,49 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+fr:
+  hello: "Hello world"
+  home:
+    paragraph_1: "Après 10 ans dans l’industrie de la télévision et du cinéma en tant que monteur, j’ai pris la décision en 2019 d’effectuer ma reconversion en tant que développeur."
+    paragraph_2: "J’ai effectué en Octobre de la même année une formation « bootcamp » au Wagon. J’y ai appris les fondamentaux du code à travers le langage Ruby et suis surtout devenu passionné."
+    paragraph_3: "En fin de programme, mon équipe a eu le plaisir de développer l’application Cyrano, qui permet l’apprentissage de poèmes, notamment grace à la reconnaissance vocale."
+    paragraph_4: "Depuis la fin de ma formation, je partage mon temps de développeur entre courtes missions freelance pour des particuliers et projets personnels. J’aime coder mes applications de façon responsive pour qu’elles s’adaptent à tout type d’écran et d’environnement."
+    paragraph_5: "Je m’estime constamment en progression et souhaite travailler sur des projets qui me challengent. Je ne me donne pas de barrière et aime faire face aux problèmes lorsque je code."
+    paragraph_6: "Pour moi, une bonne application ou un site web doivent à la fois avoir un design épuré et cohérent mais aussi être ergonomiques et agréables d’utilisation."
+  messages:
+    name: 'Nom'
+    subject: 'Sujet du message'
+    body: 'Votre message'
+    send: "Envoyer le message"
+  navbar:
+    home: "Accueil"
+    work: "Travail"
+    contact: "Contact"

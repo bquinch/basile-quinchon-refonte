@@ -2,7 +2,8 @@
 <html lang='fr'>
   <head>
     <meta charset="UTF-8">
-    <title>Basile Quinchon - Portfolio</title>
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
     <!-- Facebook Open Graph data -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="<%= meta_title %>" />
@@ -23,6 +24,7 @@
     <%= csp_meta_tag %>
     <%= favicon_link_tag asset_path('logo.png') %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
   <body>

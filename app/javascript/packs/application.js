@@ -2,7 +2,6 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 
-import $ from 'jquery';
 import "bootstrap";
 import AOS from 'aos';
 import 'aos/dist/aos.css';

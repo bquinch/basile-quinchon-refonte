@@ -11,7 +11,6 @@
             <%= f.input :email, placeholder: 'Email...', label: false, required: true  %>
           </div>
         </div>
-        <%= f.input :subject, placeholder: t('messages.subject'), label: false, required: true  %>
         <%= f.input :body, placeholder: t('messages.body'), label: false, input_html: { rows: 4 }, required: true %>
       </div>
       <%= f.submit t('messages.send'), class: 'btn btn-basile-primary' %>

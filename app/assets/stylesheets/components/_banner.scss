@@ -6,11 +6,6 @@
   overflow: hidden;
 }
 
-.banner-text {
-  padding: 0 0 0 30%;
-  opacity: .8;
-}
-
 .wrapper-color {
   position: absolute;
   top: 0px;
@@ -35,6 +30,12 @@
   width: 100%;
   overflow: hidden;
 
+}
+
+.banner-text__sub {
+  writing-mode: vertical-lr;
+  color: $blue;
+  border-right: 1px solid $orange;
 }
 
 .banner-text__first_name,
@@ -81,9 +82,6 @@
   .chevrons {
     flex-direction: column;
   }
-  .banner-text {
-    padding: 0 10%;
-  }
 
   .chevron-gauche,
   .chevron-droite {
@@ -92,17 +90,8 @@
 
   .banner-text__first_name,
   .banner-text__last_name {
-    font-size: 4rem;
-    line-height: 3rem;
-  }
-}
-
-@media (max-width: 320px) {
-  .banner-text__first_name,
-  .banner-text__last_name {
     font-size: 3rem;
     line-height: 2rem;
   }
 }
-
 

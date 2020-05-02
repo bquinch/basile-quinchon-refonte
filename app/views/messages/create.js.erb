@@ -1,0 +1,9 @@
+function renderMessage(innerHTML) {
+  const message = document.getElementById('contact');
+  message.innerHTML = innerHTML;
+}
+
+renderMessage('<%= j render "pages/contact", message: @message %>');
+<% if flash[:notice].present?%>
+  $('#flash').html("<%= j render 'shared/flashes' %>");
+<%end%>

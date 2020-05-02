@@ -1,6 +1,6 @@
 <div class="presentation-container py-5" id='contact'>
   <div class="new-message-form-container col-10 col-lg-6 col-sm-10 col-md-8 mx-auto">
-    <%= simple_form_for @message, url: messages_path do |f| %>
+    <%= simple_form_for @message, url: messages_path, remote: true do |f| %>
       <h1 class="new-message-form-container__title">Contact</h1>
       <div class="form-inputs">
         <div class="form-row">
@@ -18,4 +18,4 @@
   </div>
 </div>
 
-
+<div id="flash"></div>

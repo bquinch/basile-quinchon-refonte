@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
         MessageMailer.contact(@message).deliver_now
         format.js
         format.json { render :json => post }
-        format.html { redirect_to root_url, notice: t('alert.thanks') }
+        format.html { redirect_to root_url }
         flash[:notice] = t('alert.thanks')
         @message.save
       else

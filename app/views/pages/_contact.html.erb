@@ -1,19 +1,19 @@
-<div class="presentation-container py-5" id='contact'>
+<div class="presentation-container py-5" id="contact">
   <div class="new-message-form-container col-10 col-lg-6 col-sm-10 col-md-8 mx-auto">
     <%= simple_form_for @message, url: messages_path, remote: true do |f| %>
       <h1 class="new-message-form-container__title">Contact</h1>
       <div class="form-inputs">
         <div class="form-row">
           <div class="col-5">
-            <%= f.input :name, placeholder: t('messages.name'), label: false, required: true %>
+            <%= f.input :name, placeholder: t("messages.name"), label: false, required: true %>
           </div>
           <div class="col-7">
-            <%= f.input :email, placeholder: 'Email...', label: false, required: true  %>
+            <%= f.input :email, placeholder: "Email...", label: false, required: true  %>
           </div>
         </div>
-        <%= f.input :body, placeholder: t('messages.body'), label: false, input_html: { rows: 4 }, required: true %>
+        <%= f.input :body, placeholder: t("messages.body"), label: false, input_html: { rows: 4 }, required: true %>
       </div>
-      <%= f.submit t('messages.send'), class: 'btn btn-basile-primary' %>
+      <%= f.submit t("messages.send"), class: "btn btn-basile-primary" %>
     <% end %>
   </div>
 </div>

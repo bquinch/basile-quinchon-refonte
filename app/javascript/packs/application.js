@@ -19,7 +19,7 @@ document.addEventListener('turbolinks:load', () => {
 
   console.log('%c%s',
               "color: #FFF; background: #333; font-family: 'courier'; padding: .25rem;",
-              "If you like what you see, feel free to follow me on\nhttps://www.github.com/basilequinchon");
+              "If you like what you see, feel free to follow me on\nhttps://www.github.com/bquinch");
   // NAVBAR ANIMATION
   navToggle();
 

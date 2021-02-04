@@ -1,15 +1,15 @@
 class MessageMailer < ApplicationMailer
-  require 'mailgun-ruby'
-
   def contact(message)
     @name = message.name
     @body = message.body
-
-    mg_client = Mailgun::Client.new ENV['MAILGUN_API_KEY']
-    message_params = {:from => message.email,
-                      :to => 'basile.quinchon@gmail.com',
-                      :subject => "Nouveau message depuis le site basilequinchon.com",
-                      :text => message.body}
-    mg_client.send_message 'sandboxf777fcf6c09047d0a1b259b62580524b.mailgun.org', message_params
+    @message = message
+    message_params = {
+      from: ENV["DEVELOPER_EMAIL_ADDRESS"],
+      to: ENV["DEVELOPER_EMAIL_ADDRESS"],
+      subject: message.subject,
+      text: message.body,
+      reply_to: message.email,
+    }
+    mail(message_params)
   end
 end

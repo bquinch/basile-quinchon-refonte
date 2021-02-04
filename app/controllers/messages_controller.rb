@@ -2,26 +2,20 @@ class MessagesController < ApplicationController
   skip_before_action :verify_authenticity_token
   def create
     @message = Message.new(message_params)
-    respond_to do |format|
-      if @message.valid?
-        MessageMailer.contact(@message).deliver_now
-        format.js
-        format.json { render :json => post }
-        format.html { redirect_to root_url }
-        flash[:notice] = t('alert.thanks')
-        @message.save
-      else
-        format.html
-        format.json { render :json => post }
-        format.js   { render layout: false, content_type: 'text/javascript' }
-        flash[:notice] = t('alert.credentials')
-      end
+    if @message.valid?
+      MessageMailer.contact(@message).deliver_now
+      flash[:notice] = t("alert.thanks")
+      @message.save
+      @message = Message.new
+    else
+      flash[:alert] = t("alert.credentials")
+      response.status = 400
     end
   end
 
   private
 
   def message_params
-    params.require(:message).permit(:name, :email, :body)
+    params.require(:message).permit(:name, :email, :body, :subject)
   end
 end

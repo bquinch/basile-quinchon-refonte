@@ -4,6 +4,6 @@ function renderMessage(innerHTML) {
 }
 
 renderMessage('<%= j render "pages/contact", message: @message %>');
-<% if flash[:notice].present?%>
+<% if flash[:notice].present? || flash[:error].present? %>
   $('#flash').html("<%= j render 'shared/flashes' %>");
 <%end%>

@@ -17,9 +17,9 @@ RSpec.describe MessagesController, type: :controller do
       end
     end
 
-      context "with invalid params" do
-        it "doesn't do shit" do
-          message_params[:email] = "lololo"
+    context "with invalid params" do
+      it "doesn't send the email" do
+        message_params[:email] = "lololo"
         expect {
           post :create, params: { message: message_params }
         }.to not_change { Message.count }

@@ -89,12 +89,21 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-   api_key: 'ENV["MAILGUN_API_KEY"]',
-   domain: 'sandboxf777fcf6c09047d0a1b259b62580524b.mailgun.org',
-  }
+  domain = "https://www.basilequinchon.com"
 
+  config.action_mailer.perform_caching = false
+  ActionMailer::Base.smtp_settings = {
+      port:           '587',
+      address:        'smtp.sendgrid.net',
+      user_name:      ENV['SENDGRID_USERNAME'],
+      password:       ENV['SENDGRID_APIKEY'],
+      domain:         ENV['SMTP_DOMAIN'],
+      authentication: 'plain'
+  }
+  ActionMailer::Base.delivery_method = :smtp
+
+  config.action_mailer.default_url_options = { host: domain }
+  routes.default_url_options = { host: domain, protocol: :https }
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
   # middleware. The `delay` is used to determine how long to wait after a write

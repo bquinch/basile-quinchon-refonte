@@ -1,6 +1,6 @@
 require("@rails/ujs").start()
-require("turbolinks").start()
 require("@rails/activestorage").start()
+require("@hotwired/turbo-rails")
 
 import "bootstrap";
 import AOS from 'aos';
@@ -9,7 +9,7 @@ import { navToggle } from '../plugins/nav_toggle';
 import { scrollSite } from '../plugins/scroll_site';
 import { initRellax } from "plugins/rellax.js";
 
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('turbo:load', () => {
   // JQUERY GLOBAL $ FOR AJAX
   global.$ = jQuery;
   // WELCOME MESSAGE
@@ -34,3 +34,5 @@ document.addEventListener('turbolinks:load', () => {
   // ANIMATE ON SCROLL INIT
   AOS.init();
 });
+
+import "controllers"

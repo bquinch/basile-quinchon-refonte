@@ -10,7 +10,7 @@ RSpec.describe MessagesController, type: :controller do
           post :create, params: { message: message_params }
         }.to change { Message.count }.by(1)
         .and change { ActionMailer::Base.deliveries.count }.by(1)
-        expect(response.status).to eq 200
+        expect(response.status).to eq 201
         expect(Message.last.email).to eq(message_params[:email])
         expect(Message.last.name).to eq(message_params[:name])
         expect(Message.last.body).to eq(message_params[:body])
@@ -24,6 +24,7 @@ RSpec.describe MessagesController, type: :controller do
           post :create, params: { message: message_params }
         }.to not_change { Message.count }
         .and not_change { ActionMailer::Base.deliveries.count }
+        expect(response.status).to eq 422
       end
     end
   end

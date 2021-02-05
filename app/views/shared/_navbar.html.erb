@@ -6,16 +6,6 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%= link_to "#", class: "nav-link mr-5" do %>
-            <span><span class='nav-capital'></span><%= t('navbar.home') %></span>
-          <% end %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "#about", class: "nav-link mr-5" do %>
-            <span><span class='nav-capital'></span><%= t('navbar.work') %></span>
-          <% end %>
-        </li>
         <li class="nav-item dropdown">
           <div role="button" class="nav-link" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <% if I18n.locale == I18n.default_locale %>

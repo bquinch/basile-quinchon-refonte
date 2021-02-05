@@ -1,10 +1,15 @@
-<%= render "pages/banner" %>
-<%= render "pages/presentation" %>
-<%= render "pages/presentation_2" %>
-<%= render "pages/presentation_3" %>
-<%= render "pages/presentation_4" %>
+
+<%= turbo_frame_tag "partials-container" do %>
+  <%= render @partial_name %>
+<% end %>
 <%= turbo_frame_tag "bubble-container" do %>
   <%= render "pages/bubble" %>
 <% end %>
+<div class="mobile-presentations">
+  <%= render "pages/presentation" %>
+  <%= render "pages/presentation_2" %>
+  <%= render "pages/presentation_3" %>
+  <%= render "pages/presentation_4" %>
+  <%= render "pages/footer" %>
+</div>
 <%= turbo_frame_tag "new_form" %>
-<%= render "pages/footer" %>

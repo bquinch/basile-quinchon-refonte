@@ -1,4 +1,4 @@
-<div class="presentation-container">
+<div class="presentation-container animated fadeInRight">
   <div class="row align-items-center">
     <%= image_tag "cyrano_phone.png", alt: "cyrano_phone_small", class: 'mockup col-md-8 col-lg-8 animated fadeInLeft', lazyLoad: true %>
     <div class="presentation-text-right col-md-4 col-lg-4">
@@ -8,8 +8,10 @@
     </div>
   </div>
   <!-- WRAPPER CUBE -->
-  <div class="wrapper-color-gray-presentation right rellax" data-rellax-speed="-2"></div>
+  <div class="wrapper-color-gray-presentation right"></div>
 </div>
 
-
-
+<div class="nav-right-container">
+  <%= render partial: "shared/change" , locals: { partial_name: "pages/presentation_2" , direction: "<" } %>
+  <%= render partial: "shared/change" , locals: { partial_name: "pages/presentation_4" , direction: ">" } %>
+</div>

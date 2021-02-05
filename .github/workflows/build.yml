@@ -1,0 +1,13 @@
+name: Push to Heroku
+description: "Build action"
+on: [push]
+  branches:
+    - main
+runs:
+  using: "composite"
+  steps:
+  - uses: akhileshns/heroku-deploy@v3.8.9 # This is the action
+    with:
+      heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+      heroku_app_name: "basile-quinchon-new" #Must be unique in Heroku
+      heroku_email: "basile.quinchon@gmail.com"

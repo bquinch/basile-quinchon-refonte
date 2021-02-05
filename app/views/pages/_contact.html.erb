@@ -1,7 +1,9 @@
 <%= turbo_frame_tag dom_id(@message) do %>
-  <div class="new-message-form-container col-10 col-lg-6 col-sm-10 col-md-8 mx-auto">
+  <div class="animated fadeInLeft new-message-form-container col-10 col-lg-6 col-xl-4 col-sm-10 col-md-8 mx-auto">
     <%= simple_form_for @message, url: messages_path do |f| %>
-      <%= link_to 'X', pages_cancel_form_path, class: "cancel-form", method: :post %>
+      <%= link_to pages_cancel_form_path, class: "cancel-form", method: :post do %>
+        <i class="fas fa-times"></i>
+      <% end %>
       <h1 class="new-message-form-container__title">Contact</h1>
       <div class="form-inputs">
         <div class="form-row">

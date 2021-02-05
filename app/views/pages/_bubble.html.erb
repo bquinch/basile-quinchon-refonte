@@ -1,1 +1,3 @@
-<%= link_to t('bubble'), pages_append_form_path, class: "toggle-form-bubble" , method: :post %>
+<%= turbo_frame_tag "bubble" do %>
+  <%= link_to t('bubble'), pages_append_form_path, class: "toggle-form-bubble", method: :post %>
+<% end %>

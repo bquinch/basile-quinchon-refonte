@@ -1,14 +1,10 @@
-<%= turbo_frame_tag "home" do %>
-  <%= render "pages/banner" %>
-  <%= render "pages/presentation" %>
-  <%= render "pages/presentation_2" %>
-  <%= render "pages/presentation_3" %>
-  <%= render "pages/presentation_4" %>
-  <%= turbo_frame_tag "bubble-container" do %>
-    <%= turbo_frame_tag "bubble" do %>
-      <%= render "pages/bubble" %>
-    <% end %>
-  <% end %>
-  <%= turbo_frame_tag "new_form" %>
-  <%= render "pages/footer" %>
+<%= render "pages/banner" %>
+<%= render "pages/presentation" %>
+<%= render "pages/presentation_2" %>
+<%= render "pages/presentation_3" %>
+<%= render "pages/presentation_4" %>
+<%= turbo_frame_tag "bubble-container" do %>
+  <%= render "pages/bubble" %>
 <% end %>
+<%= turbo_frame_tag "new_form" %>
+<%= render "pages/footer" %>

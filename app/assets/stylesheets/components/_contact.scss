@@ -9,13 +9,30 @@
 }
 
 .new-message-form-container {
-  height: 70vh;
-  position: relative;
+  height: fit-content;
+  padding: 3rem;
+  border-radius: 8px;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
   display: flex;
   align-items: center;
+  box-shadow: 0 4px 16px rgba($blue, .2);
+  z-index: 500;
+  background: $lighter-gray;
 
   form {
     width: 100%;
+  }
+}
+
+.new_message {
+  position: relative;
+
+  .cancel-form {
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
   }
 }
 

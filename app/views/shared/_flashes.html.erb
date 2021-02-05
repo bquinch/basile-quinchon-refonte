@@ -1,4 +1,4 @@
-<% if @notice %>
+<%= turbo_frame_tag @notice do %>
   <div class="alert alert-info alert-dismissible fade show" role="alert">
     <%= @notice %>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -6,7 +6,7 @@
     </button>
   </div>
 <% end %>
-<% if @alert %>
+<% turbo_frame_tag @alert do %>
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <%= @alert %>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">

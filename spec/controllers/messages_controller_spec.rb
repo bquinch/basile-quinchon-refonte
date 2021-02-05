@@ -24,7 +24,7 @@ RSpec.describe MessagesController, type: :controller do
           post :create, params: { message: message_params }
         }.to not_change { Message.count }
         .and not_change { ActionMailer::Base.deliveries.count }
-        expect(response.status).to eq 422
+        expect(response.status).to eq 204
       end
     end
   end

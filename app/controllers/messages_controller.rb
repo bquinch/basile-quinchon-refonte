@@ -8,10 +8,9 @@ class MessagesController < ApplicationController
         @notice = t("alert.thanks")
         format.html { render "pages/home", status: :created }
         format.json { render json: @message, status: :created }
-        @message = Message.new
       else
-        @alert = t("alert.credentials")
-        format.html { render "pages/home", status: :unprocessable_entity  }
+        format.turbo_stream { render turbo_stream: turbo_stream.replace(@message, partial: "pages/contact", locals: { message: @message }) }
+        format.html
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end

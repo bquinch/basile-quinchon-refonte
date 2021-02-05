@@ -11,7 +11,6 @@ RSpec.describe "Pages Home View", type: :view do
     expect(response).to render_template(partial: "pages/_presentation_2")
     expect(response).to render_template(partial: "pages/_presentation_3")
     expect(response).to render_template(partial: "pages/_presentation_4")
-    expect(response).to render_template(partial: "pages/_contact")
     expect(response).to render_template(partial: "pages/_footer")
   end
 end

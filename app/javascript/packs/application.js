@@ -3,8 +3,6 @@ require("@rails/activestorage").start()
 require("@hotwired/turbo-rails")
 
 import "bootstrap";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { navToggle } from '../plugins/nav_toggle';
 import { scrollSite } from '../plugins/scroll_site';
 import init from './init_react.tsx'
@@ -25,9 +23,6 @@ document.addEventListener('turbo:load', () => {
 
   // SCROLL ON SITES
   scrollSite();
-
-  // ANIMATE ON SCROLL INIT
-  AOS.init();
 
   // REACT
   if (document.getElementById("root")) {

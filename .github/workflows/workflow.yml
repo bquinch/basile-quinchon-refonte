@@ -47,16 +47,10 @@ jobs:
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
-      - name: Install Yarn
-        uses: actions/cache@v2
+      - uses: borales/actions-yarn@v2.3.0
+        name: Yarn Install
         with:
-          path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
-      - name: Install packages
-        run: |
-          rm -rf yarn.lock
-          rm -rf node_modules
-          yarn install
+          cmd: install
       - name: Prepare database
         env:
           RAILS_ENV: test

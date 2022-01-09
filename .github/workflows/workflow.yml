@@ -4,7 +4,7 @@ env:
   POSTGRES_USER: postgres
   DB_HOST: localhost
   DEVELOPER_EMAIL_ADDRESS: "basile.quinchon@gmail.com"
-  NODE_VERSION: 14
+  NODE_VERSION: 16
 name: Rails tests
 on: [push]
 jobs:

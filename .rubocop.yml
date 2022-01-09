@@ -2,19 +2,9 @@ AllCops:
   TargetRubyVersion: 2.5
   DisabledByDefault: true
   Exclude:
-    - 'node_modules/**/*'
-    - 'script/**/*'
-    - 'support/**/*'
-    - 'tmp/**/*'
-    - 'test/**/*'
-    - 'bin/**/*'
-    - 'db/**/*'
-    - 'config/**/*'
-    - 'Gemfile'
-    - 'Rakefile'
-    - '_.rb'
-    - 'spec/rails_helper.rb'
-    - 'config.ru'
+    - db/schema.rb
+    - vendor/**/*
+    - node_modules/**/*
 
 # Prefer &&/|| over and/or.
 Style/AndOr:
@@ -94,7 +84,10 @@ Style/RedundantPercentQ:
 # assignments, where it should be aligned with the LHS.
 Layout/EndAlignment:
   Enabled: true
-  EnforcedStyleAlignWith: variable
+  EnforcedStyleAlignWith: start_of_line
+
+Layout/ElseAlignment:
+  Enabled: true
 
 # Use my_method(my_arg) not my_method( my_arg ) or my_method my_arg.
 Lint/RequireParentheses:
@@ -117,4 +110,7 @@ Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 
 Lint/Debugger:
+  Enabled: true
+
+Layout/EmptyLineAfterGuardClause:
   Enabled: true

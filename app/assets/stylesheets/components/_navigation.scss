@@ -1,0 +1,17 @@
+.nav-right-container {
+  position: fixed;
+  right: calc(50% - 5vw);
+  bottom: 2rem;
+  color: $blue;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 10vw;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+@media (max-width: 576px) {
+  .nav-right-container { display: none; }
+}

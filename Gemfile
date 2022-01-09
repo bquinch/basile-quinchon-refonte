@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.6.6"
+ruby "2.7.5"
 
 gem "bootsnap", ">= 1.4.2", require: false
 gem "jbuilder", "~> 2.7"
@@ -42,4 +42,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-

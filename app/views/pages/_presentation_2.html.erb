@@ -1,4 +1,4 @@
-<div class="presentation-container left-presentation">
+<div class="presentation-container left-presentation animated fadeInRight">
   <div class="row align-items-center">
     <div class="presentation-text-left col-md-4 col-lg-4">
       <div class="d-flex flex-column justify-content-around h-100">
@@ -9,8 +9,10 @@
     <%= image_tag "success_desk_mockup.png", alt: "success_desk", class: 'mockup col-md-8 col-lg-8', lazyLoad: true %>
   </div>
   <!-- WRAPPER CUBE -->
-  <div class="wrapper-color-gray-presentation left rellax" data-rellax-speed="-2"></div>
+  <div class="wrapper-color-gray-presentation left"></div>
 </div>
 
-
-
+<div class="nav-right-container">
+  <%= render partial: "shared/change" , locals: { partial_name: "pages/presentation" , direction: "<" } %>
+  <%= render partial: "shared/change" , locals: { partial_name: "pages/presentation_3" , direction: ">" } %>
+</div>

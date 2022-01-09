@@ -1,8 +1,11 @@
-<footer>
+<footer class="animated fadeIn">
   <div class="footer-content">
-      <a href="https://www.linkedin.com/in/basile-quinchon-b515b168/" target='_blank'><i class="fab fa-linkedin-in"></i></a>
-      <%= image_tag "logo_white.png", alt: "logo_white", width: '10%', class: 'logo-footer' %>
-      <a href="https://github.com/bquinch" target='_blank'><i class="fab fa-github"></i></a>
-    </div>
+    <a href="https://www.linkedin.com/in/basile-quinchon-b515b168/" target='_blank'><i class="fab fa-linkedin-in"></i></a>
+    <%= image_tag "logo_white.png", alt: "logo_white", width: '10%', class: 'logo-footer' %>
+    <a href="https://github.com/bquinch" target='_blank'><i class="fab fa-github"></i></a>
   </div>
 </footer>
+
+<div class="nav-right-container">
+  <%= render partial: "shared/change" , locals: { partial_name: "pages/banner" , direction: "<" } %>
+</div>

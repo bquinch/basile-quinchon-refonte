@@ -1,7 +1,7 @@
-<div class="presentation-container">
+<div class="presentation-container animated fadeInRight">
   <div class="row align-items-center" id="about">
-    <%= image_tag "cyrano_phone_large.png", alt: "cyrano_phone", class: 'mockup col-md-8 col-lg-8', lazyLoad: true %>
-    <div class="presentation-text-right col-md-4 col-lg-4">
+    <%= image_tag "cyrano_phone_large.png", alt: "cyrano_phone", class: 'mockup col-md-8 col-lg-7', lazyLoad: true %>
+    <div class="presentation-text-right col-md-4 col-lg-5">
       <div class="d-flex flex-column justify-content-between h-100">
         <p><%= t('home.paragraph_1') %></p>
         <p><%= t('home.paragraph_2') %></p>
@@ -10,8 +10,10 @@
     </div>
   </div>
   <!-- WRAPPER CUBE -->
-  <div class="wrapper-color-gray-presentation rellax" data-rellax-speed="-2"></div>
+  <div class="wrapper-color-gray-presentation"></div>
 </div>
 
-
-
+<div class="nav-right-container">
+  <%= render partial: "shared/change" , locals: { partial_name: "pages/banner" , direction: "<" } %>
+  <%= render partial: "shared/change" , locals: { partial_name: "pages/presentation_2" , direction: ">" } %>
+</div>

@@ -7,7 +7,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { navToggle } from '../plugins/nav_toggle';
 import { scrollSite } from '../plugins/scroll_site';
-import { initRellax } from "plugins/rellax.js";
 
 document.addEventListener('turbo:load', () => {
   // JQUERY GLOBAL $ FOR AJAX
@@ -25,11 +24,6 @@ document.addEventListener('turbo:load', () => {
 
   // SCROLL ON SITES
   scrollSite();
-
-  //RELLAX INIT
-  if (document.querySelector('.rellax')) {
-    initRellax();
-  };
 
   // ANIMATE ON SCROLL INIT
   AOS.init();

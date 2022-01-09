@@ -12,7 +12,6 @@
     "bootstrap": "^4.4.1",
     "jquery": "~3.4.1",
     "popper.js": "^1.16.1",
-    "rellax": "^1.12.1",
     "stimulus": "^2.0.0",
     "webpack": "^4.43.0"
   },

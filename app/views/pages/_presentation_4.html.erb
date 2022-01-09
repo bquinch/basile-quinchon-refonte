@@ -1,4 +1,4 @@
-<div class="absolute-container">
+<div class="absolute-container animated fadeInRight">
   <div class="presentation-container ">
     <div class="sites-container">
       <div class="site-phone phone-tall" id='phone' style="background-image: url(<%= image_path "vio_phone_tall.png", alt: "vio_phone_tall" %>)">
@@ -6,9 +6,13 @@
       <div class="site-desk site-tall" id='site' style="background-image: url(<%= image_path "vio_desk_tall.png", alt: "vio_desk_tall" %>)">
       </div>
     </div>
-    <div class="wrapper-color-gray-presentation center rellax" data-rellax-speed="-2"></div>
+    <div class="wrapper-color-gray-presentation center"></div>
   </div>
   <div class="wrapper-code" style="background-image: url(<%= image_path "code-trs.png", alt: "code-trs" %>)">
   </div>
 </div>
 
+<div class="nav-right-container">
+  <%= render partial: "shared/change" , locals: { partial_name: "pages/presentation_3" , direction: "<" } %>
+  <%= render partial: "shared/change" , locals: { partial_name: "pages/footer" , direction: ">" } %>
+</div>

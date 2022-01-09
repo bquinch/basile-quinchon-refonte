@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  constraints subdomain: "www" do
+  constraints subdomain: ["www", nil] do
     scope "(:locale)", locale: /en|fr/ do
       get "/", to: "pages#home"
       resources :messages, only: :create, constraints: { format: /(json|turbo_stream|html)/ }
@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   end
 
   constraints subdomain: "blog" do
-    get "/", to: "blogs#index"
+    get "/", to: "pages#blog"
+    resources :blogs, only: [:index]
+    get ":slug", to: "blogs#show"
   end
 end

@@ -18,6 +18,7 @@ gem "uglifier"
 gem "webpacker", "~> 4.0"
 gem "sendgrid-ruby"
 gem "hotwire-rails"
+gem "friendly_id"
 
 group :development do
   gem "web-console", ">= 3.3.0"

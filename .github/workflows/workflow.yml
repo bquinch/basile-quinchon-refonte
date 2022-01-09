@@ -54,9 +54,9 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Install packages
         run: |
-        rm -rf yarn.lock
-        rm -rf node_modules
-        yarn install
+          rm -rf yarn.lock
+          rm -rf node_modules
+          yarn install
       - name: Prepare database
         env:
           RAILS_ENV: test

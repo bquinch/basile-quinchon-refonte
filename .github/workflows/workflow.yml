@@ -10,6 +10,7 @@ on: [push]
 jobs:
   rubocop-test:
     name: Rubocop
+    if: ${{ !contains(github.event.head_commit.message, '[skip tests]') }}
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -22,6 +23,7 @@ jobs:
         run: rubocop
   rspec-test:
     name: RSpec
+    if: ${{ !contains(github.event.head_commit.message, '[skip tests]') }}
     needs: rubocop-test
     runs-on: ubuntu-18.04
     services:

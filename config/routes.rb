@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   end
 
   constraints subdomain: "blog" do
-    root to: "blogs#index"
+    get "/", to: "blogs#index"
   end
 end

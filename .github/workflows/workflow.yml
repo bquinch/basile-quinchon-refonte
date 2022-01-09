@@ -67,7 +67,7 @@ jobs:
       - name: Run tests
         env:
           DEVELOPER_EMAIL_ADDRESS: ${{ env.DEVELOPER_EMAIL_ADDRESS }}
-        run: bundler exec rspec
+        run: bundle exec rspec
       - name: Upload coverage results
         uses: actions/upload-artifact@master
         if: always()

@@ -9,7 +9,7 @@ class BlogsController < ApplicationController
   def show
     @blog_post = BlogPost.find_by_slug(params[:slug])
     respond_to do |format|
-      format.html { render html: "", layout: true}
+      format.html { render html: "", layout: true }
       format.json { render json: @blog_post, root: "data" }
     end
   end

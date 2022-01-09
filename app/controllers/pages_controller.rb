@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  layout "site"
+
   def home
     @partial_name = "pages/banner"
   end
